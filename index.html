@@ -3,30 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jadson Rafael - WebSite - Resume</title>
 
-    <!--Bootstrap CSS & Font Awesome-->
-
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <!--Bootstrap,Jquery & Font Awesome-->
+    
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-
-
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>    
+    
 </head>
-
 <body>
 
-    <div class="container-fluid bg-light">
-        <div class="container-fluid row bg-light" name="topo">
+    <div class="container-fluid bg-light mr-0">
+        <div class="container-fluid row bg-light " name="topo">
             <!-- Image and text -->
             <nav class="navbar navbar-light bg-light>
                 <a class=" navbar-brand" href="#">
                 <img src="image/logo.jpeg" width="150" height="50" class="d-inline-block align-top"
                     alt="Responsive image" </a>
-                <a class="btn btn-default" href="https://google.com" target="blank"></a>
-
             </nav>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="#"></a>
@@ -34,7 +31,7 @@
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
                             <a class="nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
@@ -62,11 +59,9 @@
             </nav>
         </div>
         <div class="container-fluid row bg-light" name="main-image" id="home">
-            <div class="col-sm-6 col-lg-9 mt-1 bg-light w-100 mb-2">
+            <div class="col-sm-12 col-lg-9 mt-1 bg-light w-100 mb-2 ml-0">
                 <img src=" https://thumbs.gfycat.com/CalmKeyEidolonhelvum-small.gif" class="img-fluid w-100 "
                     alt="Responsive image">
-
-                <!Imagem principal ou carrosel>
             </div>
             <div class="col-sm-6 col-lg-3 mt-1 mb-2 bg-secondary w-100 ">
                 <div class="row ml-5 mt-4" name="photoid">
@@ -187,7 +182,7 @@
                 </h4>
             </div>
             <!--CARDS-->
-            <div class="row justify-content-sm-center">
+            <div class="row justify-content-sm-center ml-1">
                 <!--Alinhamento do conteudo no centro-->
                 <div class="col-sm-6 col-md-3">
                     <div class="card mb-5 text-center ">
@@ -325,7 +320,7 @@
             </div>
         </div>
         <div class="container-fluid row" name="hobbies" id="hobbies">
-            <div class="container-fluid text-center mt-4">
+            <div class="container-fluid text-center mt-4 mb-3">
                 <h4>
                     <strong>Hobbies</strong>
 
@@ -394,7 +389,7 @@
             </div>
         </div>
         <br>
-        <div class="container-fluid" id="referencias">
+        <div class="container-fluid text-center" id="referencias">
             <h4 class="text-center mb-5"><br><strong>
                     Referências:
                 </strong>
@@ -415,6 +410,7 @@
         </footer>
     </div>
     </div>
+
 </body>
 
 </html>
