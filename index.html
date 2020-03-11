@@ -11,22 +11,27 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylo.css">
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
 </head>
 
-<body>
+<body class="bg-dark">
 
-    <div class="container-fluid bg-light mr-0">
-        <div class="container-fluid row bg-light " name="topo">
+    <div class="container-fluid bg-dark mt-1">
+        <div class="container-fluid row bg-dark mb-2" id="topo">
             <!-- Image and text -->
-            <nav class="navbar navbar-light bg-light>
-                <a class=" navbar-brand" href="#">
-                <img src="image/logo.jpeg" width="150" height="50" class="d-inline-block align-top"
-                    alt="Responsive image" </a>
+            <nav class="navbar navbar-light bg-info text-light col-3>
+                <a class=" navbar-brand" href="#" id="logo">
+                <h2 class="point">
+                    <strong>
+                        Bootstrap
+                    </strong>
+                </h2>
+                </a>
             </nav>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark col-10 ml-4 mt-1">
                 <a class="navbar-brand" href="#"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,59 +39,101 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
+                        <li class="nav-item active mr-4 bg-info">
+                            <a class="nav-link text-light" href="#home">Home<span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#sobre">Sobre</a>
+                        <li class="nav-item mr-4 bg-info">
+                            <a class="nav-link text-light" href="#sobre">Sobre</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#grad">Formação & Experiência</a>
+                        <li class="nav-item mr-4 bg-info">
+                            <a class="nav-link text-light" href="#projetos">Projetos</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#projetos">Projetos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#habilidades">Certificados & Idiomas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#hobbies">Hobbies</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#referencias">Referências</a>
+                        <li class="nav-item mr-4 bg-info">
+                            <a class="nav-link text-light" href="#hobbies">Hobbies</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </div>
-        <div class="container-fluid row bg-light" name="main-image" id="home">
-            <div class="col-sm-12 col-lg-9 mt-1 bg-light w-100 mb-2 ml-0">
-                <img src=" https://thumbs.gfycat.com/CalmKeyEidolonhelvum-small.gif" class="img-fluid w-100 "
-                    alt="Responsive image">
+        <div class="container-fluid row bg-dark" name="main-image" id="home">
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 mt-1 bg-light w-100 mb-2 ml-0 bg-dark">
+                <!--Carousel-->
+
+                <div id="carouselSite" class="carousel slide bg-dark" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <!--indicador de em qual slide está-->
+                        <li data-target="#carouselSite" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselSite" data-slide-to="1" class="active"></li>
+                        <li data-target="#carouselSite" data-slide-to="2" class="active"></li>
+                    </ol>
+                    <div class="carousel-inner ">
+                        <div class="carousel-item active">
+                            <img src="image/laptop.jpg" class="img-fluid d-block w-100 border" />
+                            <!--d-block permite visualizar em todas as resoluçoes|img-fluid a imagem ocupa todo espaço do recipiente-->
+                            <div class="carousel-caption d-none d-md-block text-light">
+                                <h1>Organização</h1>
+                                <p class="lead bg-primary text-light">Aumenta a eficiência e produtividade.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="image/teamwork.jpg" class="img-fluid d-block w-100 border" />
+                            <!--d-block permite visualizar em todas as resoluçoes|img-fluid a imagem ocupa todo espaço do recipiente-->
+                            <div class="carousel-caption d-none d-md-block text-light">
+                                <h1>Trabalho em equipe</h1>
+                                <p class="lead bg-primary text-light">Juntos somos mais fortes e vamos mais longe.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="image/business.jpg" class="img-fluid d-block w-100 border" />
+                            <!--d-block permite visualizar em todas as resoluçoes|img-fluid a imagem ocupa todo espaço do recipiente-->
+                            <div class="carousel-caption d-none d-md-block ">
+                                <h1>Ambiente</h1>
+                                <p class="lead bg-primary text-light">Ambiente saudável é sinônimo de bom entrosamento
+                                    e
+                                    alta
+                                    performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselSite" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="sr-only">Anterior</span>
+                        <!--Voltar a imagem do carrossel-->
+                    </a>
+                    <a class="carousel-control-next" href="#carouselSite" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="sr-only">Avançar</span>
+                        <!--Avançar a imagem do carrossel-->
+                    </a>
+                </div>
             </div>
-            <div class="col-sm-12 col-lg-3 mt-1 mb-2 bg-secondary w-100">
-                <div class="row ml-5 mt-4" name="photoid">
-                    <img src="https://media-exp1.licdn.com/dms/image/C4E03AQE6L5DYPTXiyA/profile-displayphoto-shrink_200_200/0?e=1588809600&v=beta&t=EBNZ6cE44Mc5Wl4-EzfKlZWxFz1pnpbDnyanzh8OxKI"
-                        alt="Responsive image" class="img-thumbnail rounded-circle">
-                    <!foto ID redonda>
+            <div class="col-xs-12 col-sm-12 col-lg-3 col-lg-3 col-xl-3 mt-1 mb-2 bg-info w-100 border">
+                <div class="container-fluid">
+                    <div class="row mt-4" name="photoid">
+                        <img src="image/profile.png" alt="Responsive image" class="img-thumbnail rounded-circle">
+                    </div>
                 </div>
-                <div class="row mt-5 text-center" name=" presentation">
-                    <h5>
-                        Estudante de Data Science & Web Development - Front End |<br>Técnico em eletrotécnica
-                    </h5>
+                <div class="container-fluid text-center" name=" presentation">
+                    <div class=" container-fluid">
+                        <div class="row mt-5 text-center">
+                            <h5><strong>
+                                    Estudante de Data Science & Web Development
+                                </strong>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row mt-5 text-center">
+                            <p class="text-center"><strong>
+                                    EMAIL: rafael10elt@gmail.com
+                                    FONE: (81) 99326-9935 <i class="fa fa-whatsapp" aria-hidden="true"></i><i
+                                        class="fa fa-telegram ml-1" aria-hidden="true"></i>
+                                </strong>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="row ml-5 mt-4 text-center" name="contact">
-                    <!Email e telefone>
-                        <p><strong> Email: rafael10elt@gmail.com
-                                <br>
-                                Fone: +55 81 99326-9935 <i class="fa fa-whatsapp" aria-hidden="true"></i><i
-                                    class="fa fa-telegram ml-1" aria-hidden="true"></i>
-                            </strong>
-
-                        </p>
-                </div>
-                <div class="row ml-5 mt-5" name="social">
-
+                <div class="row ml-4 mt-5 line text-center" name="social">
                     <a class="btn btn-default" href="https://www.linkedin.com/in/jadson-rafael-b0b04671/"
                         target="blank"> <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"
                             title="Acessar o perfil no Linkedin"></i></a>
@@ -95,94 +142,34 @@
                             aria-hidden="true"></i></a>
                     <a class="btn btn-default" href="https://github.com/rafael10elt" target="blank"
                         title="Acessar o perfil no Github"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
-                    <a class="btn btn-default" href="https://drive.google.com/open?id=1BXQsYLt-b9fjt-MyLNvtsPlw-OrOo1nP"
-                        target="blank" title="Baixar currículo em PDF"><i class="fa fa-download fa-2x"
+                    <a class="btn btn-default" href="https://drive.google.com/open?id=1DL0pUNoLFcddwfI2aRwr8RfclJPUV3Vl"
+                        target="blank" title="Baixar currículo em PDF"><i class="fa fa-file-pdf-o fa-2x"
                             aria-hidden="true"></i></a>
                 </div>
             </div>
-            <div class="container-fluid " name="about" id="sobre">
-                <div class="jumbotron jumbotron-fluid mt-3 ml-3">
-                    <div class="container-fluid">
-                        <h1 class="display-6 text-center"><strong>Olá, seja bem vindo!</strong></h1>
-                        <p class="lead text-justify"><br> Meu nome é Jadson Rafael, estudo Tecnologia em Data
-                            Science e técnicas de desenvolvimento web (Front End). Sou apaixonado por tecnologia
-                            e pelas incontáveis possibilidades de benefícios que ela pode trazer para a mundo.
-                            Meu principal objetivo atualmente é ingressar de fato na área de Tecnologia da
-                            Informação, mais precisamente como desenvolvedor front end, pois preciso da
-                            experiência adquirida com a vivência em um ambiente de produção. Assim poderei
-                            aprimorar meus conhecimentos no mundo real lidando com desafios diários.<br> O passo
-                            seguinte é, num futuro próximo, partir para a área de Ciência de Dados, ou não,
-                            depende do coração, vai que depois de experimentar a vida de Dev eu não queira mais
-                            sair. Enfim, sou um cara que gosta de criar e ver a "criatura respirando", vê-la com
-                            vida. Resolver problemas, vencer desafios e aprender com eles é minha fonte de
-                            energia vital.</p>
-                    </div>
+        </div>
+        <div class="container-fluid row" name="about" id="sobre">
+            <div class="jumbotron jumbotron-fluid mt-3 ml-3 text-light bg-secondary" id="jumbo">
+                <div class="container-fluid">
+                    <h1 class="display-6 text-center"><strong>Olá, seja bem vindo!</strong></h1>
+                    <p class="lead text-justify"><br> Meu nome é Jadson Rafael, estudo Tecnologia em Data
+                        Science e técnicas de desenvolvimento web (Front End). Sou apaixonado por tecnologia
+                        e pelas incontáveis possibilidades de benefícios que ela pode trazer para a mundo.
+                        Meu principal objetivo atualmente é ingressar de fato na área de Tecnologia da
+                        Informação, mais precisamente como desenvolvedor front end, pois preciso da
+                        experiência adquirida com a vivência em um ambiente de produção. Assim poderei
+                        aprimorar meus conhecimentos no mundo real lidando com desafios diários.<br> O passo
+                        seguinte é, num futuro próximo, partir para a área de Ciência de Dados, ou não,
+                        depende do coração, vai que depois de experimentar a vida de Dev eu não queira mais
+                        sair. Enfim, sou um cara que gosta de criar e ver a "criatura respirando", vê-la com
+                        vida. Resolver problemas, vencer desafios e aprender com eles é minha fonte de
+                        energia vital.</p>
                 </div>
             </div>
         </div>
-        <div class="container-fluid row bg-light" id="grad">
-            <div class="col-sm-12 col-md-6 bg-light rounded text-center" name="graduate">
-                <!Formação>
-                    <h4 class="mt-4 mb-4">
-                        <strong>Formação</strong>
-                    </h4>
-                    <p><strong>
-                            Uninassau - Olinda<br />
-                            Tecnologia em Data Science<br />
-                            Ano de conclusão: 2021
-                        </strong>
-                    </p>
-                    <p>
-                        <hr><strong>
-                            Uninabuco - Paulista<br />
-                            Sistemas de informação<br />
-                            Trancado em: 2016 (4 períodos concluídos)
-                        </strong>
-                    </p>
-                    <p>
-                        <hr><strong> IFPE<br />
-                            Técnico em eletrotécnica<br />
-                            Ano de conclusão: 2009
-                        </strong>
-
-                    </p>
-
-            </div>
-            <div class="col-sm-12 col-md-6 bg-light rounded text-center" name="experiences">
-                <!-- Experiência -->
-                <h4 class="mt-4 mb-4">
-                    <strong> Experiência</strong>
-                </h4>
-                <p><strong> LCS TECH - Abril 2019 a atual<br />
-                        Técnico de Manutenção de Data Center<br />
-                    </strong>
-                </p>
-
-                <p>
-                    <hr><strong>
-                        SICPA BRASIL - Maio 2013 a Jan. 2017<br />
-                        Técnico de Sistemas<br />
-                    </strong>
-                </p>
-                <p>
-                    <hr><strong>
-                        UNILEVER IGARASSU - Nov. 2011 a Set. 2012<br>
-                        Técnico em Manutenção Elétrica<br />
-                    </strong>
-                </p>
-                <p>
-                    <hr><strong>
-                        ALCOA ALUMÍNIO - Abril 2009 a Nov. 2011<br />
-                        Técnico em Manutenção Elétrica<br />
-                    </strong>
-                </p>
-            </div>
-        </div>
         <div class="container-fluid row" name=" projects" id="projetos">
-            <!-- Projetos (com ícones legais abrindo mini visualização tipo box + link de acesso)- Arduíno | Money
-                Transfer | +SIC | Curriculo | Mini Twitter-->
             <div class="container-fluid text-center mb-4 mt-5">
-                <h4>
+                <h4 class="border bg-info">
                     <strong>Projetos Pessoais</strong>
 
                 </h4>
@@ -190,8 +177,8 @@
             <!--CARDS-->
             <div class="row justify-content-sm-center ml-1">
                 <!--Alinhamento do conteudo no centro-->
-                <div class="col-sm-6 col-md-3">
-                    <div class="card mb-5 text-center ">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                    <div class="card mb-5 text-center border">
                         <img class="card-img-top mt-2" src="image/GameVue.jpeg" width="30" height="150" />
                         <div class="card-body bg-warning">
                             <h4 class="card-title">Monster Slayer</h4>
@@ -213,8 +200,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="card mb-5 text-center ">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                    <div class="card mb-5 text-center border">
                         <img class="card-img-top mt-2" src="image/sic.jpg" width="30" height="150" />
                         <div class="card-body bg-danger">
                             <h4 class="card-title">+SIC - Storage Inventory Control </h4>
@@ -232,8 +219,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="card mb-5 text-center">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                    <div class="card mb-5 text-center border">
                         <img class="card-img-top mt-2" src="image/Quiz.jpg" width="30" height="150" />
                         <div class="card-body bg-primary">
                             <h4 class="card-title">Quiz Matemático Arduíno</h4>
@@ -255,8 +242,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="card mb-5 text-center">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                    <div class="card mb-5 text-center border">
                         <img class="card-img-top mt-2" src="image/Mini_Twiter.png" width="30" height="150" />
                         <div class="card-body bg-success">
                             <h4 class="card-title">Mini Twitter</h4>
@@ -275,148 +262,210 @@
                     </div>
                 </div>
             </div>
-
-        </div>
-        <div class="container-fluid" name="skills" id="habilidades">
-            <!-- Habilidades com 3 níveis: Bootstrap, HTML,CSS,Vue.js,Node,SQL,Arduíno(C),C#,PowerBI -->
-            <div class="container-fluid text-center">
-                <h4>
-                    <strong>Certificados e Idiomas</strong>
-                </h4>
-            </div>
-            <div class="container-fluid row">
-                <div class="col-sm-12 col-md-6 text-center mt-3">
-                    <p><strong> SGIC<br />
-                            ESL - English as a Second Language<br />
-                            Duração: Junho a Dezembro de 2017
-                        </strong>
-                    </p>
-                    <p>
-                        <hr><strong>
-                            IBT College - Toronto<br />
-                            Certificate .NET Developer<br />
-                            Duração: Maio a Dezembro de 2018
-                        </strong>
-                    </p>
-                    <p>
-                        <hr><strong>
-                            DSA<br />
-                            Microsoft Power BI para Data Science<br />
-                            Duração: 54 horas
-                        </strong>
-                    </p>
-                </div>
-                <div class="col-sm-12 col-md-6 text-left mt-4">
-                    <h6>
-                        <strong>Venho estudando as seguintes tecnologias (Udemy,DSA,Youtube):</strong>
-                    </h6>
-                    <ul><strong>
-                            <li>Bootstrap</li>
-                            <li>Vue.js</li>
-                            <li>HTML5</li>
-                            <li>CSS</li>
-                            <li>Node.js</li>
-                            <li>SQL</li>
-                            <li>PowerBI</li>
-                            <li>Python para Data Science</li>
-                        </strong>
-                    </ul>
-                </div>
-
-            </div>
         </div>
         <div class="container-fluid row" name="hobbies" id="hobbies">
             <div class="container-fluid text-center mt-4 mb-3">
-                <h4>
+                <h4 class="border bg-info">
                     <strong>Hobbies</strong>
 
                 </h4>
             </div>
-            <div class="container-fluid row">
-                <div class="col-sm-12 col-md-3">
-                    <img src="image/bola.gif" alt="Responsive image" class="img-thumbnail rounded" width="1000"
-                        height="1000">
-                    <h6 class="text-center mt-2">
-                        <strong>
-                            Futebol
-                        </strong>
-                    </h6>
-                    <p class="text-justify">
-                        Super fã de futebol que sou, estou sempre conectado nos apps de esporte acompanhando os
-                        campeonatos ao redor do mundo. E por que não fazer uma apostinha na Loteca de vez em quando? Só
-                        por diversão, quem sabe a zica acaba!
-                    </p>
+            <!-- <div class="row justify-content-sm-center ml-1"> -->
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="card mb-5 text-center text-light border">
+                    <img class="card-img-top mt-2" src="image/ball.png" width="30" height="150" />
+                    <div class="card-body bg-info border">
+                        <h4 class="card-title">Futebol</h4>
+                        <p class="card-text">Para mais informações clique no link abaixo:</p>
+                        <a hre="#" class="card-link text-dark point" data-toggle="modal"
+                            data-target="#futebolModal">Saiba
+                            mais...</a>
+                    </div>
                 </div>
-                <div class="col-sm-12 col-md-3">
-                    <img src="image/controle.gif" alt="Responsive image" class="img-thumbnail rounded" width="1000"
-                        height="1000">
-                    <h6 class="text-center mt-2">
-                        <strong>
-                            Vídeo Game
-                        </strong>
-                    </h6>
-                    <p class="text-justify">
-                        Minha paixão na infância que sempre que possível eu mato a saudade. Como não poderia ser
-                        diferente, PES é meu jogo preferido (Fifeiros, não me julguem amigos,respeitem!), seguido de um
-                        bom Street Fighter | MK e uns de aventura, menos de jogo de tiro, sou péssimo!
-                    </p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="card mb-5 text-center text-light border">
+                    <img class=" card-img-top mt-2" src="image/games.jpg" width="30" height="150" />
+                    <div class="card-body bg-info border">
+                        <h4 class="card-title">Video Game </h4>
+                        <p class="card-text">Para mais informações clique no link abaixo:</p>
+                        <a hre="#" class="card-link text-dark point" data-toggle="modal"
+                            data-target="#videogameModal">Saiba
+                            mais...</a>
+                    </div>
                 </div>
-                <div class="col-sm-12 col-md-3">
-                    <img src="image/travel.gif" alt="Responsive image" class="img-thumbnail rounded" width="1000"
-                        height="1000">
-                    <h6 class="text-center mt-2">
-                        <strong>
-                            Viajar
-                        </strong>
-                    </h6>
-                    <p class="text-justify">
-                        Se eu pudesse arrumaria as malas agora e viajaria pelo mundo, afinal, não é à toa que meu hobbie
-                        na escola era memorizar as países e capitais só pra fazer disso uma competição com os
-                        coleguinhas. A grande viagem até o momento foi para o Canadá, morei 18 meses em Toronto e sem
-                        dúvidas essa experiência foi um divisor de águas na minha vida e contribue até hoje com minha
-                        evolução em todos os sentidos.
-                    </p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="card mb-5 text-center text-light border">
+                    <img class="card-img-top mt-2" src="image/plane.jpg" width="30" height="150" />
+                    <div class="card-body bg-info border">
+                        <h4 class="card-title">Viajar</h4>
+                        <p class="card-text">Para mais informações clique no link abaixo:</p>
+                        <a hre="#" class="card-link text-dark point" data-toggle="modal"
+                            data-target="#viajarModal">Saiba
+                            mais...</a>
+                    </div>
                 </div>
-                <div class="col-sm-12 col-md-3">
-                    <img src="image/cinema.gif" alt="Responsive image" class="img-thumbnail rounded" width="1000"
-                        height="1000">
-                    <h6 class="text-center mt-2">
-                        <strong>
-                            Cinema
-                        </strong>
-                    </h6>
-                    <p class="text-justify">
-                        Não sei vocês, mas ser cinéfilo é tão bom. Nem vou me arriscar a tentar citar toda a magia que o
-                        cinema emana, ele é um programa que une pessoas de todas as idades e estilos de vida. Pra mim em
-                        particular, o cinema foi responsável direto para conhecer minha esposa. O primeiro ponto em
-                        comum a gente nunca esquece.
-                    </p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="card mb-5 text-center text-light border">
+                    <img class="card-img-top mt-2" src="image/popcorn.jpg" width="30" height="150" />
+                    <div class="card-body bg-info border">
+                        <h4 class="card-title">Cinema</h4>
+                        <p class="card-text">Para mais informações clique no link abaixo:</p>
+                        <a hre="#" class="card-link text-dark point" data-toggle="modal"
+                            data-target="#cinemaModal">Saiba
+                            mais...</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <br>
-        <div class="container-fluid text-center" id="referencias">
-            <h4 class="text-center mb-5"><br><strong>
-                    Referências:
-                </strong>
-            </h4>
-            <p>
-                Gabriel De Marchi - +1 (647) 675- 2243<br>
-                (Software Engineer, Professor – IBT College)<br><br>
-
-                Joás Souza - (81) 99830-6567<br>
-                (Computer Engineer, Professor - UNINASSAU)<br><br>
-
-                Mariana Cerviño - (81) 98826-4888<br>
-                (Analista de Sistemas e Professora – Ivia | UNINASSAU)<br><br>
-            </p>
-        </div>
-        <footer class="text-center bg-light mt-5">
+    </div>
+    <footer class="text-center">
+        <p class="text-light bg-secondary border">
             Desenvolvido por Jadson Rafael
-        </footer>
+        </p>
+    </footer>
     </div>
     </div>
+    </div>
+    <!--Modal ( cabeçalho,conteúdo e rodapé) Chamada feita no card-->
 
+    <div class="modal fade" id="futebolModal" tabindex="-1" role="dialog">
+        <!--fade é o modo de exibição do modal-->
+        <div class="modal-dialog modal-lg" role="document">
+            <!--modal-lg é o tamanho do modal-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title ">Futebol</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <p>
+                                    Super fã de futebol que sou, estou sempre conectado nos apps de esporte
+                                    acompanhando os campeonatos ao redor do mundo. E
+                                    por que não fazer uma apostinha na Loteca de vez em quando? Só por diversão, quem
+                                    sabe a
+                                    zica acaba!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="videogameModal" tabindex="-1" role="dialog">
+        <!--fade é o modo de exibição do modal-->
+        <div class="modal-dialog modal-lg" role="document">
+            <!--modal-lg é o tamanho do modal-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title ">Video Game</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <p>
+                                    Minha paixão na infância que sempre que possível eu mato a saudade. Como
+                                    não poderia ser diferente, PES é meu jogo
+                                    preferido (Fifeiros, não me julguem amigos,respeitem!), seguido de um bom Street
+                                    Fighter |
+                                    MK e uns de aventura, menos
+                                    de jogo de tiro, sou péssimo!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="viajarModal" tabindex="-1" role="dialog">
+        <!--fade é o modo de exibição do modal-->
+        <div class="modal-dialog modal-lg" role="document">
+            <!--modal-lg é o tamanho do modal-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title ">Viajar</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <p>
+                                    Se eu pudesse arrumaria as malas agora e viajaria pelo mundo, afinal, não é
+                                    à toa que meu hobbie na escola era memorizar
+                                    as países e capitais só pra fazer disso uma competição com os coleguinhas. A grande
+                                    viagem
+                                    até o momento foi para o
+                                    Canadá, morei 18 meses em Toronto e sem dúvidas essa experiência foi um divisor de
+                                    águas na
+                                    minha vida e contribue até
+                                    hoje com minha evolução em todos os sentidos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cinemaModal" tabindex="-1" role="dialog">
+        <!--fade é o modo de exibição do modal-->
+        <div class="modal-dialog modal-lg" role="document">
+            <!--modal-lg é o tamanho do modal-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title ">Cinema</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <p>
+                                    Não sei vocês, mas ser cinéfilo é tão bom. Nem vou me arriscar a tentar
+                                    citar toda a magia que o cinema emana, ele é um
+                                    programa que une pessoas de todas as idades e estilos de vida. Pra mim em
+                                    particular, o
+                                    cinema foi responsável direto
+                                    para conhecer minha esposa. O primeiro ponto em comum a gente nunca esquece.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 </body>
 
 </html>
