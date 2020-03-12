@@ -53,6 +53,13 @@ body, html {
     border-radius: 10px;
     border-width: 100%;
 }
+.border2{
+    
+    border: solid;
+    border-radius: 8px;
+    border-width: 5px;
+    background-color: aliceblue;
+}
 .point{
     cursor: pointer;
     text-decoration: wavy;
