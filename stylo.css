@@ -60,6 +60,11 @@ body, html {
     border-width: 5px;
     background-color: aliceblue;
 }
+.border3{
+    
+    border: solid;
+    border-radius: 5px;   
+}
 .point{
     cursor: pointer;
     text-decoration: wavy;
